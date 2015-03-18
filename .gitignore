@@ -1,0 +1,12 @@
+# AppCode
+.idea/*
+
+# Xcode
+build/*
+Pods/*
+xcuserdata
+*.xccheckout
+*.xcuserstate
+
+# MAC OS
+.DS_Store
