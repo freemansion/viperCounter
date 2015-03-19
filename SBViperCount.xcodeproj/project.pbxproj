@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E69D84341AB9B38E005134BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D84331AB9B38E005134BE /* AppDelegate.swift */; };
-		E69D84361AB9B38E005134BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D84351AB9B38E005134BE /* ViewController.swift */; };
-		E69D84391AB9B38E005134BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E69D84371AB9B38E005134BE /* Main.storyboard */; };
 		E69D843B1AB9B38E005134BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69D843A1AB9B38E005134BE /* Images.xcassets */; };
 		E69D843E1AB9B38E005134BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69D843C1AB9B38E005134BE /* LaunchScreen.xib */; };
 		E69D844A1AB9B38E005134BE /* SBViperCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D84491AB9B38E005134BE /* SBViperCountTests.swift */; };
+		E69D84951ABACCA0005134BE /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D84941ABACCA0005134BE /* AppDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +28,12 @@
 		E69D842E1AB9B38E005134BE /* SBViperCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBViperCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69D84321AB9B38E005134BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E69D84331AB9B38E005134BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E69D84351AB9B38E005134BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E69D84381AB9B38E005134BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E69D843A1AB9B38E005134BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E69D843D1AB9B38E005134BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E69D84431AB9B38E005134BE /* SBViperCountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBViperCountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69D84481AB9B38E005134BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E69D84491AB9B38E005134BE /* SBViperCountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBViperCountTests.swift; sourceTree = "<group>"; };
+		E69D84941ABACCA0005134BE /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				E69D84331AB9B38E005134BE /* AppDelegate.swift */,
-				E69D84351AB9B38E005134BE /* ViewController.swift */,
-				E69D84371AB9B38E005134BE /* Main.storyboard */,
+				E69D84941ABACCA0005134BE /* AppDependencies.swift */,
+				E69D84961ABACD43005134BE /* SBCountModule */,
 				E69D843A1AB9B38E005134BE /* Images.xcassets */,
 				E69D843C1AB9B38E005134BE /* LaunchScreen.xib */,
 				E69D84311AB9B38E005134BE /* Supporting Files */,
@@ -110,6 +108,45 @@
 				E69D84481AB9B38E005134BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E69D84961ABACD43005134BE /* SBCountModule */ = {
+			isa = PBXGroup;
+			children = (
+				E69D84971ABACD43005134BE /* Interactor */,
+				E69D84981ABACD43005134BE /* Presenter */,
+				E69D84991ABACD43005134BE /* View */,
+				E69D849A1ABACD43005134BE /* Wireframe */,
+			);
+			path = SBCountModule;
+			sourceTree = "<group>";
+		};
+		E69D84971ABACD43005134BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E69D84981ABACD43005134BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E69D84991ABACD43005134BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E69D849A1ABACD43005134BE /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69D84391AB9B38E005134BE /* Main.storyboard in Resources */,
 				E69D843E1AB9B38E005134BE /* LaunchScreen.xib in Resources */,
 				E69D843B1AB9B38E005134BE /* Images.xcassets in Resources */,
 			);
@@ -212,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69D84361AB9B38E005134BE /* ViewController.swift in Sources */,
+				E69D84951ABACCA0005134BE /* AppDependencies.swift in Sources */,
 				E69D84341AB9B38E005134BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +272,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E69D84371AB9B38E005134BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E69D84381AB9B38E005134BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E69D843C1AB9B38E005134BE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,6 +435,7 @@
 				E69D844F1AB9B38E005134BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E69D84501AB9B38E005134BE /* Build configuration list for PBXNativeTarget "SBViperCountTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +444,7 @@
 				E69D84521AB9B38E005134BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
