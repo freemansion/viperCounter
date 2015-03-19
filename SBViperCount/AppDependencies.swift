@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class AppDependencies {
-
+    var countViewController = SBCountViewController()
     
     init() {
         configureDependencies()
     }
         
-    func installRootViewControllerIntoWindow(window: UIWindow) {
-        
+    func installRootViewControllerIntoWindow(window: UIWindow?) {
+        window?.rootViewController = countViewController
     }
     
     func configureDependencies() {
