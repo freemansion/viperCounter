@@ -21,6 +21,16 @@ class AppDependencies {
     }
     
     func configureDependencies() {
+        var interactor = SBCountInteractor()
+        var presenter = SBCountPresenter()
+        var view = self.countViewController
+        
+        view.presenter = presenter
+        presenter.userInterface = view
+        
+        presenter.interactor = interactor
+        interactor.output = presenter
+        
         
     }
 }

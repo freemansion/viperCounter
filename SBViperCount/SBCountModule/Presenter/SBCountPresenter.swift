@@ -11,24 +11,41 @@ import Foundation
 class SBCountPresenter : NSObject, SBCountInteractorOutput, SBCountPresenterInterface {
     var userInterface: SBCountViewInterface?
     var interactor: SBCountInteractorInput?
-    var formatter: NSFormatter?
+    var formatter: NSNumberFormatter? {
+        get {
+            var spellOutFormatter = NSNumberFormatter()
+            spellOutFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
+            return spellOutFormatter
+        }
+    }
+    
+    //MARK: View interface
+    func updateView() {
+        self.interactor?.requestCount()
+    }
     
     func increment() {
-        
+        self.interactor?.increment()
     }
     
     func decrement() {
-        
-    }
-    
-    func updateView() {
-        
-    }
-    
-    func setCount(number: Int) {
-
+        self.interactor?.decrement()
     }
 
+    func updateCount(number: Int) {
+        self.userInterface?.setCountLabelText(formattedCount(number))
+        self.userInterface?.setDecrementEnabled(canDecrementCount(number))
+    }
+    
+    func formattedCount(number: Int) -> String! {
+        return formatter?.stringFromNumber(number)
+    }
+    
+    func canDecrementCount(number: Int) -> Bool {
+        return number > 0
+    }
+    
+    
     
     
 }

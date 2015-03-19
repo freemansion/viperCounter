@@ -10,5 +10,5 @@ import Foundation
 
 protocol SBCountViewInterface {
     func setCountLabelText(text: String)
-    func setDecrementEnabled(enbaled: Bool)
+    func setDecrementEnabled(enabled: Bool)
 }

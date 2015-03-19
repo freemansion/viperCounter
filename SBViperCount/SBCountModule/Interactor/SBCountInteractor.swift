@@ -12,6 +12,10 @@ class SBCountInteractor: NSObject, SBCountInteractorInput {
     var output : SBCountInteractorOutput?
     var number : Int = 0
     
+    func requestCount() {
+        updateNumber()
+    }
+    
     func decrement() {
         if canDecrement() {
             --number
@@ -28,7 +32,9 @@ class SBCountInteractor: NSObject, SBCountInteractorInput {
         return number > 0
     }
     
+    // MARK: Output interface
+    
     func updateNumber() {
-        output?.setCount(number)
+        output?.updateCount(number)
     }
 }

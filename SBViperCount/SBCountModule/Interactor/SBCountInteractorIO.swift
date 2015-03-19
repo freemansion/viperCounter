@@ -9,10 +9,11 @@
 import Foundation
 
 protocol SBCountInteractorInput {
+    func requestCount()
     func increment()
     func decrement()
 }
 
 protocol SBCountInteractorOutput {
-    func setCount(number: Int)
+    func updateCount(number: Int)
 }
